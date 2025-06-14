@@ -112,9 +112,10 @@ const last = people.sort((a, b) => {
   const [blast, bfirst] = b.split(", ");
   return alast > blast ? 1 : -1;
 });
-console.table(last);
+// console.table(last);
+
 // 8. Reduce Exercise
-// Sum up the instances of each of these
+//Sum up the instances of each of these
 const data = [
   "car",
   "car",
@@ -131,3 +132,12 @@ const data = [
   "car",
   "truck",
 ];
+
+const veh = data.reduce(function (obj, item) {
+  if (!obj[item]) {
+    obj[item] = 0;
+  }
+  obj[item]++;
+  return obj;
+}, {});
+console.table(veh);
