@@ -94,13 +94,9 @@ let lived = inventors.reduce((total, inventor) => {
 // console.table(lived);
 
 // 5. Sort the inventors by years lived
-const oldest = inventors.sort((a, b) => {
-  if (a.passed - a.year < b.passed - b.year) {
-    return 1;
-  } else {
-    return -1;
-  }
-});
+const oldest = inventors.sort(
+  (a, b) => (a.passed - a.year < b.passed - b.year ? 1 : -1) // when a and b is compared and returned 1 it returns b
+);
 console.table(oldest);
 
 // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
