@@ -73,16 +73,18 @@ const born15 = inventors.filter(function (a) {
 // const born15 = inventors.filter((a) => a.year <= 1600 && a.year > 1500);
 //  this also return when the given conditons are true
 
-console.table(born15);
+// console.table(born15);
 
 // Array.prototype.map()
 // 2. Give us an array of the inventors first and last names
 
 const name = inventors.map((a) => a.first + " " + a.last);
-console.table(name);
+// console.table(name);
 
 // Array.prototype.sort()
 // 3. Sort the inventors by birthdate, oldest to youngest
+const largest = inventors.sort((a, b) => (a.year > b.year ? 1 : -1));
+console.table(largest);
 
 // Array.prototype.reduce()
 // 4. How many years did all the inventors live all together?
