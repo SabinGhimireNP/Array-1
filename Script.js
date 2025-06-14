@@ -91,9 +91,17 @@ const largest = inventors.sort((a, b) => (a.year > b.year ? 1 : -1));
 let lived = inventors.reduce((total, inventor) => {
   return total + (inventor.passed - inventor.year);
 }, 0);
-console.table(lived);
+// console.table(lived);
 
 // 5. Sort the inventors by years lived
+const oldest = inventors.sort((a, b) => {
+  if (a.passed - a.year < b.passed - b.year) {
+    return 1;
+  } else {
+    return -1;
+  }
+});
+console.table(oldest);
 
 // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
 // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
