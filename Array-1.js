@@ -140,4 +140,4 @@ const veh = data.reduce(function (obj, item) {
   obj[item]++;
   return obj;
 }, {});
-console.table(veh);
+// console.table(veh);
